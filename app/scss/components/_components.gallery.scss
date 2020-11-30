@@ -1,0 +1,77 @@
+/*
+    gallery style
+ */
+
+.gallery {
+  background: #e7f0ff;
+  padding: 76.4px 0 100px;
+
+  &__content {
+
+    h3 {
+      text-align: center;
+    }
+
+    h4 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 22px auto 31px;
+
+      span {
+        display: inline-block;
+        width: 52px;
+        height: 51px;
+        background: url("../img/gallery/icon.png") no-repeat center/cover;
+      }
+    }
+
+    p {
+      line-height: 130%;
+      color: #fff;
+      box-sizing: border-box;
+      width: 488px;
+      padding: 12px 0 15px;
+      margin: 0 auto;
+      position: relative;
+
+      &:before {
+        content: "";
+        display: block;
+        width: 26px;
+        height: 16px;
+        background: url("../img/gallery/arrow.png") no-repeat center/cover;
+        position: absolute;
+        top: 17.05px;
+      }
+
+      &:first-of-type {
+        background: #22438f;
+        border-radius: 10px 10px 0px 0px;
+        padding: 12px 122px 15px 155px;
+
+        &:before {
+          left: 120.02px;
+        }
+      }
+
+      &:last-of-type {
+        background: #4f8e0b;
+        border-radius: 0px 0px 10px 10px;
+        padding: 12px 84px 15px 48px;
+
+        &:before {
+          right: 49.81px;
+          transform: scale(-1, 1);
+        }
+      }
+    }
+
+    &-block {
+      border-radius: 20px;
+      overflow: hidden;
+      max-width: 753px;
+      margin: 0 auto;
+    }
+  }
+}

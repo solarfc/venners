@@ -1,0 +1,109 @@
+/*
+    description style
+ */
+
+.description {
+  background: #e7f0ff;
+  padding: 33px 0 56.6px;
+
+  h3 {
+    max-width: 655px;
+    margin: 0 auto 166px;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+
+    &-block {
+      box-sizing: border-box;
+      width: 49%;
+      max-width: 555px;
+      padding: 103px 0 43px;
+      background: #ffffff;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      border-radius: 20px;
+      text-align: center;
+      position: relative;
+      z-index: 9;
+
+      h4 {
+
+      }
+
+      p {
+        box-sizing: border-box;
+        padding: 0 50px;
+        margin-top: 14px;
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        width: 170px;
+        height: 170px;
+        border-radius: 20px;
+        position: absolute;
+        top: -75px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &:first-child, &:nth-child(2) {
+        margin-bottom: 135px;
+      }
+
+      &:first-child {
+
+        &:after {
+          background: url("../img/description/1.png") no-repeat center/cover;
+        }
+      }
+
+      &:nth-child(2) {
+
+        &:after {
+          background: url("../img/description/2.png") no-repeat center/cover;
+        }
+      }
+
+      &:nth-child(3) {
+
+        &:after {
+          background: url("../img/description/3.png") no-repeat center/cover;
+        }
+      }
+
+      &:last-child {
+
+        &:after {
+          background: url("../img/description/4.png") no-repeat center/cover;
+        }
+      }
+    }
+
+    &:before, &:after {
+      content: "";
+      display: block;
+      position: absolute;
+    }
+
+    &:before {
+      width: 260px;
+      height: 260px;
+      background: url("../img/description/5.png") no-repeat center/cover;
+      top: 144px;
+      left: -143px;
+    }
+
+    &:after {
+      width: 284px;
+      height: 252px;
+      background: url("../img/description/6.png") no-repeat center/cover;
+      bottom: -56.6px;
+      right: -90.83px;
+    }
+  }
+}

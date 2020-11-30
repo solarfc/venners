@@ -1,0 +1,151 @@
+/*
+    header start
+ */
+
+.header {
+  background: linear-gradient(180deg, #e7f0ff 0%, rgba(255, 255, 255, 0) 100%);
+  padding: 77px 0 138px;
+
+  &__content {
+    position: relative;
+
+    h1 {
+      max-width: 655px;
+    }
+
+    h4 {
+      margin: 27px auto 47px;
+    }
+
+    &-img {
+      position: absolute;
+      top: 23px;
+      right: 0;
+
+      figure {
+        width: 457px;
+        height: 600px;
+        background: #fdda42;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        position: relative;
+        z-index: 9;
+      }
+
+      img {
+        position: absolute;
+
+        &.girl {
+          bottom: 0;
+          right: 20.06px;
+          z-index: 10;
+        }
+
+        &.product {
+          top: 179px;
+          left: -267px;
+          z-index: 11;
+        }
+      }
+
+      .sale {
+        position: absolute;
+        bottom: 100.21px;
+        left: -169.78px;
+        z-index: 12;
+      }
+
+      &:before, &:after {
+        content: "";
+        display: block;
+        position: absolute;
+      }
+
+      &:before {
+        /* заменить на */
+        width: 284px;
+        height: 252px;
+        background: url("../img/header/3.png") no-repeat center/cover;
+        top: 23px;
+        right: -89.83px;
+      }
+
+      &:after {
+        width: 184px;
+        height: 92px;
+        background: url("../img/header/4.png") no-repeat center/cover;
+        bottom: -72px;
+        right: -50px;
+      }
+    }
+
+    ul {
+
+      li {
+        box-sizing: border-box;
+        padding-left: 51px;
+        position: relative;
+
+        p {
+          line-height: 130%;
+        }
+
+        &:before {
+          content: "";
+          display: block;
+          width: 32px;
+          height: 32px;
+          background: url("../img/header/checked.png") no-repeat center/cover;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0;
+        }
+
+        &:nth-child(2) {
+          margin: 29px 0;
+        }
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        width: 180px;
+        height: 126px;
+        background: url("../img/header/5.png") no-repeat center/cover;
+        position: absolute;
+        bottom: -213px;
+        right: calc(100% - 46px);
+      }
+    }
+
+    .price {
+      max-width: 340px;
+      text-align: center;
+      margin: 52px 0 27px;
+    }
+
+    &:before, &:after {
+      content: "";
+      display: block;
+      position: absolute;
+    }
+
+    &:before {
+      /* скрыть на */
+      width: 56px;
+      height: 100px;
+      background: url("../img/header/1.png") no-repeat center/cover;
+      top: 113px;
+      left: -138.9px;
+    }
+
+    &:after {
+      width: 144px;
+      height: 120px;
+      background: url("../img/header/2.png") no-repeat center/cover;
+      top: -30px;
+      right: -192px;
+    }
+  }
+}
