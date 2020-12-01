@@ -6,8 +6,16 @@
   background: #e7f0ff;
   padding-bottom: 100px;
 
+  @include mq(md) {
+    padding-bottom: 50px;
+  }
+
   h3 {
     margin-bottom: 42px;
+
+    @include mq(md) {
+      margin-bottom: 25px;
+    }
   }
 
   &__content {

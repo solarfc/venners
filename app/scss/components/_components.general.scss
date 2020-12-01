@@ -64,6 +64,14 @@ h1, h2 {
   font-size: 48px;
   line-height: 125%;
   color: #472f9c;
+
+  @include mq(lg) {
+    font-size: 45px;
+  }
+
+  @include mq(md) {
+    font-size: 48px;
+  }
 }
 
 h3 {
@@ -176,5 +184,79 @@ h5 {
     position: absolute;
     top: 8.99px;
     left: 29.41px;
+  }
+}
+
+.owl-nav {
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    position: relative;
+    z-index: 25;
+
+    &.owl-next {
+      transform: scale(-1, 1);
+    }
+
+    svg {
+
+      path {
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+}
+
+.owl-dots {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 20;
+
+  button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+  }
+}
+
+form {
+
+  .form-group {
+
+    input {
+      font-family: $r, sans-serif;
+      font-size: 18px;
+      line-height: 23px;
+      color: #222;
+      display: block;
+      box-sizing: border-box;
+      width: 100%;
+      border: 1px solid #666666;
+      border-radius: 20px;
+      transition: all 0.3s ease-in-out;
+
+      &::placeholder {
+        font-family: $r, sans-serif;
+        font-size: 18px;
+        line-height: 23px;
+        color: #222;
+        opacity: 1;
+      }
+
+      &:active, &:focus, &:required {
+        outline: none;
+      }
+
+      &:active, &:focus {
+        border: 1px solid #7854f6;
+      }
+    }
+
+    &.tel {
+      margin: 10px 0 20px;
+    }
   }
 }

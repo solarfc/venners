@@ -1,0 +1,44 @@
+/*
+    footer style
+ */
+
+.footer {
+  background: #c3daff;
+  padding: 17px 0;
+  position: relative;
+  z-index: 20;
+
+  &__content {
+    box-sizing: border-box;
+    padding: 0 63px;
+    display: flex;
+    justify-content: space-between;
+
+    @include mq(lg) {
+      padding: 0;
+    }
+
+    @include mq(md) {
+      display: block;
+      text-align: center;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 14px;
+      color: #444;
+
+      &.politic {
+        cursor: pointer;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      &:nth-child(2) {
+        margin: 6px auto;
+      }
+    }
+  }
+}

@@ -5,6 +5,10 @@
 .advantages {
   padding: 5px 0 64px;
 
+  @include mq(md) {
+    padding: 0 0 0;
+  }
+
   &__content {
     display: flex;
     justify-content: space-between;
@@ -47,6 +51,9 @@
 
       h4 {
 
+        @include mq(md) {
+          font-size: 20px;
+        }
       }
 
       &:first-child {

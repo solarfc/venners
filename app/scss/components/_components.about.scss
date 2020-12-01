@@ -6,16 +6,34 @@
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #e7f0ff 100%);
   padding: 69px 0 104.12px;
 
+  @include mq(md) {
+    padding: 61px 0 50px;
+  }
+
   &__content {
     position: relative;
 
     h3 {
       text-align: left;
+
+      @include mq(md) {
+        text-align: center;
+      }
     }
 
     p {
       max-width: 555px;
       margin: 31px 0 33px;
+
+      @include mq(lg) {
+        max-width: 530px;
+      }
+
+      @include mq(md) {
+        text-align: center;
+        max-width: 100%;
+        margin: 18px auto 23px;
+      }
 
       span {
         font-family: $sb, sans-serif;
@@ -25,10 +43,24 @@
     }
 
     &-img {
-      width: 555px;
+      width: 49%;
+      max-width: 555px;
       position: absolute;
       top: 17px;
       right: 0;
+
+      @include mq(lg) {
+        top: 57px;
+      }
+
+      @include mq(md) {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: 555px;
+        margin: 0 auto;
+      }
 
       img {
         margin: 0;
@@ -36,12 +68,16 @@
         filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.25));
 
         &:first-of-type {
+          width: 88%;
+          max-width: 485px;
           margin-left: auto;
           position: relative;
           z-index: 9;
         }
 
         &:nth-of-type(2) {
+          width: 73%;
+          max-width: 400px;
           margin-top: -50px;
         }
       }
@@ -79,11 +115,21 @@
         background: url("../img/about/4.png") no-repeat center/cover;
         bottom: -104.12px;
         right: -115px;
+        z-index: -1;
       }
     }
 
     ul {
       max-width: 555px;
+
+      @include mq(lg) {
+        max-width: 500px;
+      }
+
+      @include mq(md) {
+        max-width: 100%;
+        margin: 32px auto 24px;
+      }
 
       li {
         box-sizing: border-box;
@@ -115,6 +161,10 @@
 
     .to-order {
       margin-top: 44px;
+
+      @include mq(md) {
+        margin: 0 auto;
+      }
     }
   }
 }

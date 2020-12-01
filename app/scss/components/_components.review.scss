@@ -3,9 +3,148 @@
  */
 
 .review {
-  padding: 83px 0 0;
+  padding-top: 83px;
+
+  @include mq(md) {
+    padding-top: 37px;
+  }
 
   &__content {
+    position: relative;
 
+    h3 {
+
+    }
+
+    img {
+
+    }
+
+    &-slider {
+      max-width: 810px;
+      margin: 0 auto;
+
+      .owl-item {
+        box-sizing: border-box;
+        padding: 0 30px 70px;
+      }
+
+      .owl-nav {
+        max-width: 630px;
+        margin: -20px auto 0;
+
+        @include mq(md) {
+          box-sizing: border-box;
+          padding: 0 29px;
+        }
+
+        button {
+
+          svg {
+
+            path {
+              fill: #666;
+            }
+          }
+
+          &:hover {
+
+            svg {
+
+              path {
+                fill: #7854f6;
+              }
+            }
+          }
+        }
+      }
+
+      .owl-dots {
+        margin-top: -21px;
+        position: relative;
+        z-index: 20;
+
+        button {
+          background: #888 !important;
+
+          &.active {
+            background: #7854f6 !important;
+          }
+        }
+      }
+
+      &__item {
+        position: relative;
+
+        figure {
+          box-sizing: border-box;
+          background: #ffffff;
+          padding: 69px 50px 45px;
+          box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+          border-radius: 20px;
+          text-align: center;
+
+          p {
+            margin-bottom: 15px;
+
+            span {
+              font-family: $sb, sans-serif;
+              text-transform: uppercase;
+              color: #ee4057;
+            }
+          }
+        }
+
+        &:before {
+          content: "";
+          display: block;
+          width: 92%;
+          height: 100%;
+          background: #ffffff;
+          box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+          border-radius: 20px;
+          position: absolute;
+          top: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: -1;
+        }
+      }
+    }
+
+    &:before, &:after {
+      /* скрыть на md */
+      content: "";
+      display: block;
+      position: absolute;
+
+      @include mq(md) {
+        display: none;
+      }
+    }
+
+    &:before {
+      width: 211px;
+      height: 207px;
+      background: url("../img/review/1.png") no-repeat center/cover;
+      top: 232.12px;
+      left: -72.44px;
+
+      @include mq(lg) {
+        left: -32.44px;
+      }
+    }
+
+    &:after {
+      width: 96px;
+      height: 104px;
+      background: url("../img/review/2.png") no-repeat center/cover;
+      top: 450px;
+      right: -21.13px;
+
+      @include mq(lg) {
+        right: 0;
+      }
+    }
   }
 }

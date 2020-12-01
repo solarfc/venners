@@ -6,9 +6,17 @@
   background: #e7f0ff;
   padding: 33px 0 56.6px;
 
+  @include mq(md) {
+    padding: 17px 0 67px;
+  }
+
   h3 {
     max-width: 655px;
     margin: 0 auto 166px;
+
+    @include mq(md) {
+      margin-bottom: 99px;
+    }
   }
 
   &__content {
@@ -37,6 +45,10 @@
         box-sizing: border-box;
         padding: 0 50px;
         margin-top: 14px;
+
+        @include mq(md) {
+          padding: 0 25px;
+        }
       }
 
       &:after {
@@ -53,6 +65,10 @@
 
       &:first-child, &:nth-child(2) {
         margin-bottom: 135px;
+
+        @include mq(md) {
+          margin-bottom: 114px;
+        }
       }
 
       &:first-child {
@@ -96,6 +112,13 @@
       background: url("../img/description/5.png") no-repeat center/cover;
       top: 144px;
       left: -143px;
+
+      @include mq(md) {
+        width: 130px;
+        height: 130px;
+        top: 308px;
+        left: -45px;
+      }
     }
 
     &:after {

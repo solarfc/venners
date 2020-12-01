@@ -6,6 +6,10 @@
   background: #e7f0ff;
   padding: 76.4px 0 100px;
 
+  @include mq(md) {
+    padding: 0 0 65px;
+  }
+
   &__content {
 
     h3 {
@@ -17,6 +21,14 @@
       align-items: center;
       justify-content: center;
       margin: 22px auto 31px;
+
+      @include mq(lg) {
+        font-size: 22px;
+      }
+
+      @include mq(md) {
+        font-size: 16px;
+      }
 
       span {
         display: inline-block;
