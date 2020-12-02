@@ -22,6 +22,10 @@
     display: flex;
     justify-content: space-between;
 
+    @include mq(s) {
+      display: block;
+    }
+
     &-block {
       width: 32%;
       max-width: 360px;
@@ -30,8 +34,21 @@
       border-radius: 20px;
       overflow: hidden;
 
+      @include mq(s) {
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto 30px;
+      }
+
       img {
         width: 100%;
+      }
+
+      &:last-child {
+
+        @include mq(s) {
+          margin-bottom: 0;
+        }
       }
     }
   }

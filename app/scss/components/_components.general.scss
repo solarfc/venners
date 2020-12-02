@@ -72,6 +72,16 @@ h1, h2 {
   @include mq(md) {
     font-size: 48px;
   }
+
+  @include mq(s) {
+    font-size: 40px;
+    line-height: 42px;
+  }
+
+  @include mq(xs) {
+    font-size: 36px;
+    line-height: 46px;
+  }
 }
 
 h3 {
@@ -79,6 +89,16 @@ h3 {
   line-height: 128%;
   text-align: center;
   color: #472f9c;
+
+  @include mq(s) {
+    font-size: 33px;
+    line-height: 39px;
+  }
+
+  @include mq(xs) {
+    font-size: 30px;
+    line-height: 36px;
+  }
 }
 
 h4, h5 {
@@ -133,7 +153,6 @@ h5 {
 }
 
 .to-order, .form-group.order {
-  max-width: 340px;
   text-align: center;
 
   a, button {
@@ -167,6 +186,10 @@ h5 {
   }
 }
 
+.to-order {
+  max-width: 340px;
+}
+
 .sale {
   box-sizing: border-box;
   width: 142px;
@@ -192,18 +215,18 @@ h5 {
   justify-content: space-between;
 
   button {
+    width: 27px;
+    height: 16px;
     position: relative;
     z-index: 25;
+    transition: all 0.3s ease-in-out;
+
+    span {
+      display: none;
+    }
 
     &.owl-next {
       transform: scale(-1, 1);
-    }
-
-    svg {
-
-      path {
-        transition: all 0.3s ease-in-out;
-      }
     }
   }
 }

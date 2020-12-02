@@ -30,6 +30,8 @@
         margin: 0 auto;
         text-align: center;
         order: 1;
+        position: relative;
+        z-index: 9;
       }
     }
 
@@ -44,88 +46,105 @@
       @include mq(md) {
         max-width: 100%;
         text-align: center;
-        margin: 9px auto 66px;
         order: 2;
+        margin: 9px auto 66px;
       }
     }
 
     &-img {
+      max-width: 457px;
       position: absolute;
       top: 23px;
       right: 0;
-      width: 457px;
-      height: 600px;
 
       @include mq(lg) {
+        max-width: 360px;
         top: 53px;
-        width: 360px;
-        height: 472px;
       }
 
       @include mq(md) {
-        width: 457px;
-        height: 600px;
-        margin: 0 auto;
         position: relative;
         top: 0;
         left: 0;
+        margin: 0 auto;
         order: 3;
+      }
 
+      @include mq(s) {
+        width: 100%;
+        max-width: 400px;
       }
 
       figure {
-        width: 100%;
-        height: 100%;
-        background: #fdda42;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
-        border-radius: 20px;
         position: relative;
         z-index: 9;
-      }
 
-      img {
-        position: absolute;
+        img {
 
-        &.girl {
-          bottom: 0;
-          right: 20.06px;
-          z-index: 10;
-          width: 123%;
-          max-width: 560px;
+          &.bg {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+          }
 
-          @include mq(md) {
-            width: 86%;
-            min-width: 250px;
-            left: 50%;
-            transform: translateX(-50%);
+          &.girl {
+            width: 123%;
+            max-width: 560px;
+            position: absolute;
+            bottom: 0;
+            right: 4.38%;
+
+            @include mq(s) {
+              width: 86%;
+              min-width: 250px;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
+
+          &.product {
+            width: 95%;
+            max-width: 434px;
+            position: absolute;
+            top: calc(29.83% - 10px);
+            left: -63%;
+
+            @include mq(s) {
+              width: 100%;
+              top: -13%;
+              left: -4%;
+            }
           }
         }
 
-        &.product {
-          width: 95%;
-          max-width: 434px;
-          top: 29.8%;
-          left: -267px;
-          z-index: 11;
+        .sale {
+          position: absolute;
+          bottom: calc(16.7% + 10px);
+          left: calc(-32.82% - 27px);
 
-          @include mq(md) {
-            width: 86%;
-            min-width: 250px;
-            top: -10%;
-            left: 3%;
+          @include mq(lg) {
+            bottom: calc(12.7% + 10px);
+            left: calc(-35.82% - 27px);
           }
-        }
-      }
 
-      .sale {
-        position: absolute;
-        bottom: 100.21px;
-        left: -169.78px;
-        z-index: 12;
+          @include mq(s) {
+            top: 36%;
+            left: 6.55%;
+          }
 
-        @include mq(md) {
-          top: 31.67%;
-          left: 6.55%;
+          @include mq(xs) {
+            width: 94px;
+            height: 47px;
+          }
+
+          span {
+
+            @include mq(xs) {
+              font-size: 24px;
+              top: 7.83px;
+              left: 19.52px;
+            }
+          }
         }
       }
 
@@ -143,7 +162,7 @@
         top: 23px;
         right: -89.83px;
 
-        @include mq(md) {
+        @include mq(s) {
           width: 42px;
           height: 75px;
           background: url("../img/header/1.png") no-repeat center/cover;
@@ -162,6 +181,7 @@
 
         @include mq(md) {
           transform: rotate(90deg);
+          transform-origin: center;
           top: -6px;
           right: -91px;
         }
@@ -223,6 +243,11 @@
           background: url("../img/header/6.png") no-repeat center/cover;
           bottom: -81px;
           right: 4.08px;
+        }
+
+        @include mq(xs) {
+          bottom: -91px;
+          right: -4.08%;
         }
       }
     }

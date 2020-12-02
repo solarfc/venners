@@ -6,27 +6,30 @@
   padding: 5px 0 64px;
 
   @include mq(md) {
-    padding: 0 0 0;
+    padding: 0;
   }
 
   &__content {
     display: flex;
     justify-content: space-between;
 
+    @include mq(s) {
+      display: block;
+    }
+
     &-block {
       box-sizing: border-box;
       width: 32%;
       max-width: 360px;
-      padding: 50px 0px 44px;
+      padding: 50px 0 44px;
       border-radius: 20px;
       text-align: center;
       transition: all 0.75s ease-in-out;
       position: relative;
 
-      svg {
-        position: absolute;
-        top: 26px;
-        right: 112px;
+      @include mq(s) {
+        width: 100%;
+        margin: 0 auto 30px;
       }
 
       span {
@@ -54,6 +57,24 @@
         @include mq(md) {
           font-size: 20px;
         }
+
+        @include mq(s) {
+          font-size: 24px;
+        }
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        width: 76px;
+        height: 148px;
+        position: absolute;
+        top: 26px;
+        right: 112px;
+
+        @include mq(xs) {
+          right: 27.24%;
+        }
       }
 
       &:first-child {
@@ -66,16 +87,13 @@
             background: url("../img/advantages/1.png") no-repeat center/cover;
           }
         }
+
+        &:before {
+          background: url("../img/advantages/4.png") no-repeat center/cover;
+        }
       }
 
       &:nth-child(2) {
-
-        svg {
-
-          circle {
-            fill: #7854f6;
-          }
-        }
 
         span {
           background: #7854f6;
@@ -85,15 +103,16 @@
             background: url("../img/advantages/2.png") no-repeat center/cover;
           }
         }
+
+        &:before {
+          background: url("../img/advantages/5.png") no-repeat center/cover;
+        }
       }
 
       &:last-child {
 
-        svg {
-
-          circle {
-            fill: #ee4057;
-          }
+        @include mq(s) {
+          margin-bottom: 0;
         }
 
         span {
@@ -104,6 +123,10 @@
             width: 98px;
             background: url("../img/advantages/3.png") no-repeat center/cover;
           }
+        }
+
+        &:before {
+          background: url("../img/advantages/6.png") no-repeat center/cover;
         }
       }
 

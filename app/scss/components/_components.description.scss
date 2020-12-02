@@ -25,42 +25,58 @@
     justify-content: space-between;
     position: relative;
 
+    @include mq(s) {
+      display: block;
+    }
+
     &-block {
       box-sizing: border-box;
       width: 49%;
       max-width: 555px;
-      padding: 103px 0 43px;
-      background: #ffffff;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-      border-radius: 20px;
-      text-align: center;
-      position: relative;
-      z-index: 9;
 
-      h4 {
-
+      @include mq(s) {
+        width: 100%;
+        margin: 0 auto;
       }
 
-      p {
-        box-sizing: border-box;
-        padding: 0 50px;
-        margin-top: 14px;
-
-        @include mq(md) {
-          padding: 0 25px;
-        }
-      }
-
-      &:after {
-        content: "";
-        display: block;
-        width: 170px;
-        height: 170px;
+      figure {
+        padding: 103px 0 43px;
+        background: #ffffff;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
         border-radius: 20px;
-        position: absolute;
-        top: -75px;
-        left: 50%;
-        transform: translateX(-50%);
+        text-align: center;
+        position: relative;
+        z-index: 9;
+
+        h4 {
+
+        }
+
+        p {
+          box-sizing: border-box;
+          padding: 0 50px;
+          margin-top: 14px;
+
+          @include mq(md) {
+            padding: 0 25px;
+          }
+
+          @include mq(xs) {
+            padding: 0 10px;
+          }
+        }
+
+        &:after {
+          content: "";
+          display: block;
+          width: 170px;
+          height: 170px;
+          border-radius: 20px;
+          position: absolute;
+          top: -75px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
       }
 
       &:first-child, &:nth-child(2) {
@@ -71,62 +87,86 @@
         }
       }
 
+      &:first-child, &:last-child {
+        position: relative;
+
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+        }
+      }
+
       &:first-child {
 
-        &:after {
-          background: url("../img/description/1.png") no-repeat center/cover;
+        figure {
+
+          &:after {
+            background: url("../img/description/1.png") no-repeat center/cover;
+          }
+        }
+
+        &:before {
+          width: 260px;
+          height: 260px;
+          background: url("../img/description/5.png") no-repeat center/cover;
+          bottom: -105px;
+          left: -143px;
+
+          @include mq(md) {
+            width: 130px;
+            height: 130px;
+            bottom: -55px;
+            left: -45px;
+          }
         }
       }
 
       &:nth-child(2) {
 
-        &:after {
-          background: url("../img/description/2.png") no-repeat center/cover;
+        figure {
+
+          &:after {
+            background: url("../img/description/2.png") no-repeat center/cover;
+          }
         }
       }
 
       &:nth-child(3) {
 
-        &:after {
-          background: url("../img/description/3.png") no-repeat center/cover;
+        @include mq(s) {
+          margin-bottom: 114px;
+        }
+
+        figure {
+          &:after {
+            background: url("../img/description/3.png") no-repeat center/cover;
+          }
         }
       }
 
       &:last-child {
 
-        &:after {
-          background: url("../img/description/4.png") no-repeat center/cover;
+        figure {
+
+          &:after {
+            background: url("../img/description/4.png") no-repeat center/cover;
+          }
+        }
+
+        &:before {
+          width: 284px;
+          height: 252px;
+          background: url("../img/description/6.png") no-repeat center/cover;
+          bottom: -56.6px;
+          right: -90.83px;
+
+          @include mq(s) {
+            top: -271.4px;
+            right: -225.17px;
+          }
         }
       }
-    }
-
-    &:before, &:after {
-      content: "";
-      display: block;
-      position: absolute;
-    }
-
-    &:before {
-      width: 260px;
-      height: 260px;
-      background: url("../img/description/5.png") no-repeat center/cover;
-      top: 144px;
-      left: -143px;
-
-      @include mq(md) {
-        width: 130px;
-        height: 130px;
-        top: 308px;
-        left: -45px;
-      }
-    }
-
-    &:after {
-      width: 284px;
-      height: 252px;
-      background: url("../img/description/6.png") no-repeat center/cover;
-      bottom: -56.6px;
-      right: -90.83px;
     }
   }
 }

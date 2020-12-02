@@ -37,7 +37,10 @@
       }
 
       &:nth-child(2) {
-        margin: 6px auto;
+
+        @include mq(md) {
+          margin: 6px auto;
+        }
       }
     }
   }
