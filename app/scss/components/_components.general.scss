@@ -170,6 +170,10 @@ h5 {
     border-radius: 20px;
     transition: all 0.75s ease-in-out;
 
+    @include mq(xs) {
+      font-size: 16px;
+    }
+
     &:hover {
       background: #5625ff;
     }
@@ -187,6 +191,7 @@ h5 {
 }
 
 .to-order {
+  width: 100%;
   max-width: 340px;
 }
 
@@ -281,5 +286,126 @@ form {
     &.tel {
       margin: 10px 0 20px;
     }
+  }
+}
+
+.body__filter {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  z-index: -5;
+}
+
+a.bucket {
+  width: 80px;
+  height: 80px;
+  background: #7854F6;
+  box-shadow: 0px 10px 20px rgba(120, 84, 246, 0.3);
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  transition: all 0.3s ease-in-out;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 29px;
+    height: 26px;
+    background: url("../img/bucket.png") no-repeat center/cover;
+    position: absolute;
+    top: 27px;
+    left: 26px;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.loader {
+  width: 100%;
+  height: 100%;
+  background: #e7f0ff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  display: none;
+
+  @keyframes ldio-zxvwvb71jw {
+    0% {
+      transform: translate(2px, 2px)
+    }
+    33.33% {
+      transform: translate(102px, 2px)
+    }
+    66.66% {
+      transform: translate(42px, 102px)
+    }
+    100% {
+      transform: translate(2px, 2px)
+    }
+  }
+
+
+  .ldio-zxvwvb71jw > div {
+    transform: scale(0.8);
+    transform-origin: 100px 100px;
+  }
+
+  .ldio-zxvwvb71jw > div > div {
+    animation: ldio-zxvwvb71jw 2s linear infinite;
+    position: absolute
+  }
+
+  .ldio-zxvwvb71jw > div > div div:nth-child(1) {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 12px solid #7854F6;
+    background: transparent;
+  }
+
+  .ldio-zxvwvb71jw > div > div div:nth-child(2) {
+    width: 17px;
+    height: 51px;
+    transform: rotate(-45deg);
+    background: #7854F6;
+    border-radius: 0 0 8px 8px;
+    position: absolute;
+    top: 68px;
+    left: 85px
+  }
+
+  .loadingio-spinner-magnify-8zxjhw7xbd9 {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    overflow: hidden;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .ldio-zxvwvb71jw {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0; /* see note above */
+  }
+
+  .ldio-zxvwvb71jw div {
+    box-sizing: content-box;
   }
 }

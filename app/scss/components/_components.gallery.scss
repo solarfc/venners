@@ -134,39 +134,6 @@
       }
     }
 
-    //p {
-    //  width: 488px;
-    //  padding: 12px 0 15px;
-    //  margin: 0 auto;
-    //  position: relative;
-    //
-    //  @include mq(xs) {
-    //    width: 100%;
-    //  }
-    //
-    //  &:before {
-    //    top: 17.05px;
-    //  }
-    //
-    //  &:first-of-type {
-    //
-    //    @include mq(xs) {
-    //
-    //    }
-    //
-    //    &:before {
-    //      left: 120.02px;
-    //    }
-    //  }
-    //
-    //  &:last-of-type {
-    //
-    //    &:before {
-    //      right: 49.81px;
-    //    }
-    //  }
-    //}
-
     &-block {
       border-radius: 20px;
       overflow: hidden;
